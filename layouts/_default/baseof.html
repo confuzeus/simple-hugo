@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="d-flex vh-100 flex-column justify-content-between">
+      {{- partial "navbar.html" . -}}
+
+      {{- block "main" . }}{{- end }}
+
+      {{- partial "footer.html" . -}}
+    </div>
+
+    {{ $bootstrapJs := (resources.Get "js/bootstrap.js") | js.Build (dict "targetPath" "js/bootstrap.bundle.js") | resources.Fingerprint "sha512" }}
+    <script
+      src="{{ $bootstrapJs.RelPermalink }}"
+      integrity="{{ $bootstrapJs.Data.Integrity }}"
+    ></script>
+
+    {{ $mainJs := (resources.Get "js/main.js") | js.Build (dict "targetPath" "js/main.min.js") | resources.Fingerprint "sha512" }}
+    <script
+      src="{{ $mainJs.RelPermalink }}"
+      integrity="{{ $mainJs.Data.Integrity }}"
+    ></script>
+
+    {{ if ne .Site.IsServer true }}
+      <script>
+        window.plausible =
+          window.plausible ||
+          function () {
+            (window.plausible.q = window.plausible.q || []).push(arguments);
+          };
+      </script>
+    {{ end }}
+
+  </body>
+</html>

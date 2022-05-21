@@ -1,0 +1,21 @@
+{
+  "name": "simple-hugo",
+  "version": "1.0.0",
+  "description": "Simple Hugo and Bootstrap project template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Josh Michael Karamuth",
+  "license": "MIT",
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.8.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}

@@ -1,0 +1,18 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+paginate = 10
+
+copyright = "&copy; <a href=\"https://confuzeus.com\">Michael Karamuth</a> 2022"
+
+[markup]
+  [markup.tableOfContents]
+    endLevel=2
+
+[params]
+
+[params.rss]
+includeContent = true
+authorName = "Michael Karamuth"
+authorEmail = "michael@confuzeus.com"

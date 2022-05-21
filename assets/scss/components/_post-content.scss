@@ -1,0 +1,31 @@
+#TableOfContents {
+    
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            font-size: 18px;
+        }
+
+        li:not(:last-child) {
+            margin-bottom: map-get($spacers, 2);
+        }
+    }
+    
+}
+
+.post-content {
+
+    p, li {
+        font-size: $lead-font-size;
+    }
+
+    h2 {
+        margin-top: map-get($spacers, 8);
+        margin-bottom: map-get($spacers, 5);
+    }
+    h3 {
+        margin-top: map-get($spacers, 3);
+    }
+}

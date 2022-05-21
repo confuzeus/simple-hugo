@@ -1,0 +1,9 @@
+{{ $title := .Get "title" }}
+
+
+<div class="my-5 alert alert-{{ .Get "level" }}" role="alert">
+  {{ if $title }}
+    <h4 class="alert-heading mb-4">{{ $title }}</h4>
+  {{ end }}
+  {{ .Inner | markdownify }}
+</div>

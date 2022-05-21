@@ -1,0 +1,9 @@
+public
+node_modules
+assets/css
+assets/js
+static/css
+static/js
+resources
+.hugo_build.lock
+static/*/*.map

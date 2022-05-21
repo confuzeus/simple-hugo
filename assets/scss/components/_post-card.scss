@@ -1,0 +1,8 @@
+.card {
+
+    &--post {
+        @include media-breakpoint-up(lg) {
+            height: 200px;
+        }
+    }
+}
